@@ -1,0 +1,22 @@
+@charset "utf-8";
+// ===================================================================
+// 各SCSSファイルのインポート
+// ===================================================================
+
+@import "bourbon";
+
+
+// 設定用
+@import "config/setting";
+
+// リセットCSS、フォントサイズ
+@import "vendor/reset";
+
+// ミックスイン、@extend、CSS3など
+@import "config/mixin";
+
+// メインスタイル - layout.scssはメイン内でインポート
+@import "modules/main";
+
+// 印刷用スタイル
+@import "vendor/print";

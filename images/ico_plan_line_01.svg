@@ -1,0 +1,14 @@
+<svg id="ico_plan_line_01" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_140" data-name="長方形 140" width="36.908" height="50.809" fill="#a19595"/>
+    </clipPath>
+  </defs>
+  <rect id="長方形_132" data-name="長方形 132" width="56" height="56" fill="none"/>
+  <g id="ico_plan_line_01-2" data-name="ico_plan_line_01" transform="translate(9.818 2.191)">
+    <g id="グループ_343" data-name="グループ 343" clip-path="url(#clip-path)">
+      <path id="パス_95" data-name="パス 95" d="M1.674,50.809h33.56a1.675,1.675,0,0,0,1.674-1.674V1.674A1.675,1.675,0,0,0,35.234,0H1.674A1.675,1.675,0,0,0,0,1.674v47.46a1.675,1.675,0,0,0,1.674,1.674m16.78-2.717a1.953,1.953,0,1,1,1.953-1.953,1.956,1.956,0,0,1-1.953,1.953M4.136,6.046A1.675,1.675,0,0,1,5.81,4.372H31.1a1.675,1.675,0,0,1,1.674,1.674V40.591A1.674,1.674,0,0,1,31.1,42.265H5.81a1.674,1.674,0,0,1-1.674-1.674Z" fill="#a19595"/>
+    </g>
+    <text id="LINE" transform="translate(5.182 28.809)" fill="#a19595" font-size="11" font-family="Meiryo"><tspan x="0" y="0">LINE</tspan></text>
+  </g>
+</svg>

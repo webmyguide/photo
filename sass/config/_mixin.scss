@@ -1,0 +1,487 @@
+@charset "utf-8";
+// ===================================================================
+// mixinやらCSS3やら、extendも。
+// ===================================================================
+
+/*----------------------------------------------------
+	mixin
+----------------------------------------------------*/
+@mixin font_color($key:'base') {
+    color: map-get($font_color, $key);
+}
+
+//@mixinでメディアクエリを呼び出す
+@mixin mq($breakpoint: 'sm') {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*----------------------------------------------------
+	WordPress　ネイティブCSS
+----------------------------------------------------*/
+@mixin wpCss() {
+  strong { font-weight: bold; }
+  em { font-style: italic; }
+  blockquote {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+  }
+
+  .aligncenter {
+      display: block;
+      margin: 0 auto;
+  }
+  .alignright { float: right; }
+  .alignleft { float: left; }
+  /* clearfix */
+
+  .clearfix {
+      overflow: hidden;
+      zoom: 1;
+  }
+  .clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+}
+
+
+/* --- アニメーションベース --- */
+$fps: 60;
+$baseFps: 60;
+$magnificationFps:$fps/$baseFps;
+$oneSecond: 1/$fps;
+@mixin create_ani_base($name,$second,$delay:0){
+    .ani-#{$name} {
+        @include animation-name($name);
+        @include animation-duration(#{$oneSecond*$second}s);
+        @include animation-delay(#{($oneSecond*$delay)}s);
+        @include animation-timing-function(linear);
+        @include animation-iteration-count(initial);
+        @content;
+    }
+}
+
+/* --- アニメーションベース --- */
+@mixin balloon($name,$type:''){
+    @if $type == 1 {
+        .balloon#{$name} {
+            min-height: 94px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            background: $bg_color2 url('../images/bg_balloon_01.png') no-repeat;
+            background-size: 55px auto;
+            background-position: 12px 12px;
+            width: 100%;
+            padding: $margin_value2 $margin_value2 $margin_value2 80px;
+            font-size: 12px;
+
+            @include mq(md) {
+                background-size: 95px auto;
+                background-position: 16px 16px;
+                padding: 20px 24px 20px 122px;
+                font-size: 16px;
+                min-height: 126px;
+            }
+        }
+    } @else if $type == 2 {
+        .balloon#{$name} {
+            position: relative;
+            background: $bg_color2;
+            width: 100%;
+            padding: $margin_value2 96px $margin_value2 $margin_value2;
+            font-weight: 600;
+            line-height: 1.4;
+
+
+            @include mq(md) {
+                padding: 20px 160px 20px 24px;
+                font-size: 16px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: url('../images/bg_balloon_04.png') no-repeat;
+                background-size: 90px auto;
+                width: 90px;
+                height: calc(100% + 10px);
+                max-height: 124px;
+
+                @include mq(md) {
+                    background-size: 134px auto;
+                    width: 134px;
+                    height: calc(100% + 30px);
+                    max-height: 197px;
+                }
+            }
+
+            @content;
+        }
+    } @else {
+        .balloon#{$name} {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            line-height: 1.4;
+            font-weight: 600;
+            min-height: 50px;
+            background: $bg_color2 url('../images/bg_balloon_01.png') no-repeat;
+            background-size: 40px auto;
+            background-position: 6px 6px;
+            padding: $margin_value1 $margin_value2 $margin_value1 56px;
+
+
+            @include mq(md) {
+                background-position: 10px 10px;
+                background-size: 55px auto;
+                padding: 10px 20px 10px 75px;
+                min-height: 75px;
+                font-size: 18px;
+            }
+
+            &-charaR {
+                background-position: right 8px;
+                padding: $margin_value2 56px $margin_value2 $margin_value3;
+                @include mq(md) {
+                    padding: 10px 75px 10px 20px;
+                }
+            }
+        }
+    }
+
+}
+
+@mixin btnArrow($type:''){
+    padding: 8px 14px 6px 0px;
+    position: relative;
+
+    @include mq(md) {
+        padding: 12px 36px 8px 0px;
+    }
+
+    &::after {
+        content: "\e911";
+        font-family: 'icomoon';
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        color: $main_color;
+        @include transform( translateY(-50%) );
+        line-height: 1;
+        font-weight: normal;
+        font-size: 10px;
+
+        @include mq(md) {
+            font-size: 12px;
+            right: 12px;
+        }
+    }
+}
+
+@mixin content_pc(){
+    @include mq(md) {
+        width: get_vw(904,$lg_width);
+        min-width: get_vw(904,$lg_width);
+        margin-right: get_vw(74,$lg_width);
+        margin-left: auto;
+    }
+    @include mq(lg) {
+        width: 904px;
+        min-width: 904px;
+        margin-right: 74px;
+        margin-left: auto;
+    }
+    @include mq(xl) {
+        width: get_vw(1110,$xxl_width);
+        margin-right: get_vw(92,$xxl_width);
+    }
+}
+
+@mixin fz_vw($font_size:14, $viewport:1000){
+    font-size: $font_size * 1px;
+    font-size: get_vw($font_size, $viewport);
+}
+
+
+/*----------------------------------------------------
+	function
+----------------------------------------------------*/
+@function bor_color($key:'base') {
+    @return map-get($bor_color, $key);
+}
+
+// Round (四捨五入)
+@function round-decimal ($number, $digits: 0) {
+    @return to-fixed($number, $digits, 'round');
+}
+
+// Ceil (切り上げ)
+@function ceil-decimal ($number, $digits: 0) {
+    @return to-fixed($number, $digits, 'ceil');
+}
+
+// Floor (切り捨て)
+@function floor-decimal ($number, $digits: 0) {
+    @return to-fixed($number, $digits, 'floor');
+}
+
+@function to-fixed ($number, $digits: 0, $round: 'round') {
+    $n: 1;
+    // $number must be a number
+    @if type-of($number) != number {
+        @warn '#{ $number } is not a number.';
+        @return $number;
+    }
+    // $digits must be a unitless number
+    @if type-of($digits) != number {
+        @warn '#{ $digits } is not a number.';
+        @return $number;
+    } @else if not unitless($digits) {
+        @warn '#{ $digits } has a unit.';
+        @return $number;
+    }
+    @for $i from 1 through $digits {
+        $n: $n * 10;
+    }
+    @if $round == 'round' {
+        @return round($number * $n) / $n;
+    } @else if $round == 'ceil' {
+        @return ceil($number * $n) / $n;
+    } @else if $round == 'floor' {
+        @return floor($number * $n) / $n;
+    } @else {
+        @warn '#{ $round } is undefined keyword.';
+        @return $number;
+    }
+}
+
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport:1000){
+    $rate: 100 / $viewport;
+    @return $rate * $size * 1vw;
+}
+
+@function get_pc_minsize($size){
+    $rate: $xl_width / $xxl_width;
+    @return $rate * $size * 1px;
+}
+
+@function get_tb_minsize($size){
+    $rate: $xl_width / $xxl_width;
+    $px: $rate * $size;
+    @return get_vw($px,$lg_width);
+}
+
+
+
+/*----------------------------------------------------
+	extend
+----------------------------------------------------*/
+// %inner {
+//   width: 100%;
+//   max-width: $base_width;
+//   margin: 0 auto;
+// }
+
+
+// %display_table {
+//   display: table;
+//   width: 100%;
+//
+//   &__row {
+//     display: table-row;
+//   }
+//
+//   &__cell {
+//     display: table-cell;
+//   }
+// }
+//
+// %btnCommon1 {
+//     // @include linear-gradient(to top, #6ec620, #7dd822);
+//     background: $main_color;
+//     text-decoration: none;
+//     color: #ffffff;
+//     display: block;
+//     border-radius: 6px;
+//     line-height: 1.4;
+//     text-align: center;
+//     position: relative;
+//     border: 0;
+//     overflow: hidden;
+//     font-weight: 600;
+//
+//     @include mq(md) {
+//         padding: 10px;
+//     }
+// }
+//
+// %btnCommon2 {
+//     background-color: $bg_color3;
+//     text-decoration: none;
+//     color: $font_color1;
+//     display: block;
+//     border-radius: 6px;
+//     line-height: 1.4;
+//     text-align: center;
+//     border: 0;
+//
+//
+//     @include mq(md) {
+//         padding: 10px;
+//     }
+// }
+//
+//
+// %titleCommon1 {
+//     background: url('../images/bor_tit_03.png') repeat-x left bottom;
+//     background-size: 25px auto;
+//     position: relative;
+//     line-height: 1.4;
+//     font-weight: 600;
+//     display: flex;
+//     align-items: center;
+//     padding: 4px 0px 6px 90px;
+//     min-height: 52px;
+//     margin: 0 0 $margin_value2;
+//     font-size: 16px;
+//
+//     @include mq(md) {
+//         background-size: 34px auto;
+//         padding: 4px 0px 4px 124px;
+//         margin: 0 0 20px;
+//         font-size: 20px;
+//         min-height: 70px;
+//     }
+//
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         left: 0;
+//         bottom: 0;
+//         background: url('../images/bg_balloon_03.png') no-repeat left bottom;
+//         background-size: 90px auto;
+//         width: 90px;
+//         height: 52px;
+//
+//         @include mq(md) {
+//             background-size: 119px auto;
+//             width: 119px;
+//             height: 70px;
+//         }
+//     }
+// }
+//
+// %titleCommon2 {
+//     background: url('../images/deco_title_02.png') no-repeat left center;
+//     color: $main_color;
+//     font-weight: 600;
+//     background-size: 30px auto;
+//     padding: 5px 0px 0px 36px;
+//     margin: 0 0 $margin_value2;
+//     min-height: 30px;
+//
+//     @include mq(md) {
+//         background-size: 38px auto;
+//         font-size: 18px;
+//         padding: 8px 10px 4px 45px;
+//         margin: 0 0 20px;
+//         min-height: 38px;
+//     }
+// }
+//
+// %titlePage1 {
+//     background: url('../images/bor_tit_03.png') repeat-x left bottom;
+//     background-size: 25px auto;
+//     position: relative;
+//     line-height: 1.4;
+//     font-weight: 600;
+//     padding: 14px 0 10px 54px;
+//     margin: $margin_value1 0 $margin_value2;
+//     font-size: 16px;
+//
+//     @include mq(md) {
+//         background-size: 34px auto;
+//         padding: 10px 50px 16px 76px;
+//         margin: 12px 0 20px;
+//         font-size: 24px;
+//     }
+//
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         left: 0;
+//         bottom: 0;
+//         background: url('../images/bg_balloon_02.png') no-repeat left bottom;
+//         background-size: 46px auto;
+//         width: 46px;
+//         height: 52px;
+//
+//         @include mq(md) {
+//             background-size: 62px auto;
+//             width: 62px;
+//             height: 70px;
+//         }
+//     }
+// }
+//
+//
+// %bgCommon1 {
+//     background: rgba($main_color,0.2);
+//     padding: $margin_value2;
+//
+//     @include mq(md) {
+//         padding: 20px;
+//     }
+// }
+//
+//
+// %box1 {
+//     background: #ffffff url('../images/bor_box_01.jpg') repeat-x left top;
+//     background-size: 42px auto;
+//
+//     @include mq(md) {
+//         background-size: 56px auto;
+//     }
+// }
+//
+// %bgProduct {
+//     background: #ffffff url('../images/bor_box_01.jpg') repeat-x left top;
+//     background-size: 42px auto;
+//
+//     @include mq(md) {
+//         background-size: 56px auto;
+//     }
+// }
+//
+// %boxTitle {
+//     background: url('../images/bor_tit_02.png') no-repeat center bottom;
+//     text-align: center;
+//     line-height: 1.4;
+//     background-size: contain;
+//     width: 90%;
+//     margin: 0 auto;
+//     padding: 20px 0px 20px;
+//     font-size: 18px;
+//
+//     @include mq(md) {
+//         background-size: 565px auto;
+//         width: 90%;
+//         margin: 0 auto;
+//         padding: 40px 20px 36px;
+//         font-size: 26px;
+//     }
+//
+//     strong {
+//         @extend .marker-01;
+//     }
+// }

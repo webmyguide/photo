@@ -1,0 +1,14 @@
+<svg id="ico_plan_slide_01" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_138" data-name="長方形 138" width="54.318" height="40.653" fill="#a19595"/>
+    </clipPath>
+  </defs>
+  <rect id="長方形_131" data-name="長方形 131" width="56" height="56" fill="none"/>
+  <g id="ico_plan_slide_01-2" data-name="ico_plan_slide_01" transform="translate(0.5 7.847)">
+    <g id="グループ_340" data-name="グループ 340" clip-path="url(#clip-path)">
+      <path id="パス_90" data-name="パス 90" d="M0,40.653H54.318V0H0ZM24.939,2.9h4.441V7.345H24.939Zm11.1,17.423a8.882,8.882,0,1,1-8.882-8.882,8.882,8.882,0,0,1,8.882,8.882M17.763,2.9H22.2V7.345H17.763ZM7.857,37.75H3.416V33.309H7.857Zm0-30.405H3.416V2.9H7.857ZM15.03,37.75H10.589V33.309H15.03Zm0-30.405H10.589V2.9H15.03ZM22.2,37.75H17.763V33.309H22.2Zm7.176,0H24.939V33.309h4.441Zm7.174,0H32.113V33.309h4.441Zm0-30.405H32.113V2.9h4.441ZM43.728,37.75H39.286V33.309h4.442Zm0-30.405H39.286V2.9h4.442ZM50.9,37.75H46.461V33.309H50.9Zm0-30.405H46.461V2.9H50.9Z" fill="#a19595"/>
+      <path id="パス_91" data-name="パス 91" d="M173.085,121.277l8.854-5.111-8.854-5.111Z" transform="translate(-149.371 -95.839)" fill="#a19595"/>
+    </g>
+  </g>
+</svg>

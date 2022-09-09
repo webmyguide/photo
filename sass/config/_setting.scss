@@ -1,0 +1,128 @@
+@charset "utf-8";
+// ===================================================================
+// 設定
+// ===================================================================
+
+
+// HTML5の場合は値を「false」から「true」にする
+$use_html5: false;
+
+
+
+// 汎用クラスを使用するか
+$use_extend_object: true;
+
+	// 簡易ロールオーバーの値
+	$opacity_value: .55;
+
+	// 余白調整用のクラスを使用するか
+	$use_spacing_classes: false;
+
+
+// 画像のパス
+$img_path: "../img/";
+
+
+// ベースフォント
+$base_font: "my_font","メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+$gothic_font: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+$base_font_ie: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+
+
+// ページ全体の横幅
+$base_width: 1000px;
+
+
+// 要素の基本下マージン
+$base_margin_bottom: 15px;
+
+
+// メインカラー（ベースカラー）
+$main_color: #f95a78;
+
+// サブカラー
+$sub_color: #ff9855;
+
+// アクセントカラー
+$accent_color1: #fbaf15;
+$accent_color2: #fa2625;//後で消す
+$accent_color3: #3b9aff;//後で消す
+
+$bor_color1: #3b2121;//茶色
+$bor_color2: #707070;//灰色
+$bor_color3: #e6e6e6;//灰色
+$bor_color4: #e2d3d3;//ライト灰色
+
+
+
+
+$bg_color1: #f2eeea;
+$bg_color2: #fcfff0; //クリーム色
+$bg_color3: #e5dcd3;//黄土色
+$bg_color4: #fdfaf0;//クリーム色
+$bg_color5: #3b2121;//茶色
+$bg_color6: #bf3636;//茶色
+$bg_color7: #f7f7f7;//灰色
+$bg_color8: #e6dfdb;//クリーム色
+$bg_color9: #ff0070;//ピンク色
+$bg_color10: #FFD8D8;//薄ピンク色
+
+
+
+$font_color1: #3b2121;//茶色
+$font_color2: #a29090;//灰色
+$font_color3: #bf3636;//赤色
+
+
+// ベーステキストカラー
+$font_color: (
+  'base': #3b2121,
+  '1': #66cc00,
+  '2': #ff9900,
+	'3': #fa2625
+);
+
+// ベースリンクカラー
+$link_color: #06f;
+$link_color_visited: #39f;
+$link_color_hover: #00f;
+$link_color_active: #00f;
+
+
+// ボーダーカラー
+$bor_color: (
+  'base': #3b2121,
+	'1': #66cc00,
+	'2': #ff9900
+);
+
+
+// 付与するベンダープレフィックス
+$set_prefix: -webkit-, -moz-, -ms-, -o-, '';
+
+
+// 角丸の初期値
+$br_value: 6px;
+$br_value_pc: 6px;
+
+// マージン
+$margin_value1: 6px;
+$margin_value2: 12px;
+$margin_value3: 16px;
+$margin_value_pc1: 6px;
+$margin_content_sp1: 20px;
+$margin_content_pc1: 40px;
+
+$md_width: 750;
+$lg_width: 978;
+$xl_width: 1516;
+$xxl_width: 1862;
+
+//ブレイクポイント
+$breakpoints: (
+  'sm': 'screen and (min-width: 480px)',
+  'md': 'screen and (min-width: 769px)',
+  'lg': 'screen and (min-width: 978px)',
+  'xl': 'screen and (min-width: 1516px)',
+  'xxl': 'screen and (min-width: 1862px)',
+) !default;

@@ -1,0 +1,1663 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{
+	border: 0;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+	max-width: 100%;
+}
+html {
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: 游ゴシック, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", ヒラギノ角ゴシック, "Hiragino Sans", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+	line-height: 1.4285em;
+	font-size:14px;
+	color:#333333;
+}
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0.1px;
+	line-height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+* html .clearfix{
+	height: 1%;
+}
+
+.clearfix{
+	display: block;
+}
+
+.clearfix{
+	zoom: 100%;
+}
+a{
+	color: #333333;
+	text-decoration:none;
+	outline: 0;
+}
+a:visited{
+}
+a:focus{
+}
+a:hover, a:active{
+}
+
+h1, h2, h3, h4, h5, h6{
+	clear: both;
+	margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+address{
+	font-style: italic;
+	margin-bottom: 24px;
+}
+abbr[title]{
+	cursor: help;
+}
+b, strong{
+	font-weight: 600;
+}
+cite, dfn, em, i{
+	font-style: italic;
+}
+mark, ins{
+	text-decoration: none;
+}
+p{
+	text-align: left;
+}
+code, kbd, tt, var, samp, pre{
+	font-family: monospace, serif;
+	font-size: 14px;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre{
+	border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 24px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 12px;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+blockquote, q{
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after{
+	content: "";
+	content: none;
+}
+blockquote{
+	font-size: 100%;
+	font-style: italic;
+	font-weight: 300;
+}
+blockquote cite, blockquote small{
+	font-size: 14px;
+	font-weight: 400;
+}
+blockquote em, blockquote i, blockquote cite{
+	font-style: normal;
+}
+blockquote strong, blockquote b{
+	font-weight: 400;
+}
+small{
+	font-size: smaller;
+}
+big{
+	font-size: 125%;
+}
+sup, sub{
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup{
+	bottom: 1ex;
+}
+sub{
+	top: .5ex;
+}
+ul{
+	list-style-type: none;
+}
+ol{
+
+}
+li > ul, li > ol{
+	margin: 0 0 0 0px;
+}
+img{
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+	vertical-align: middle;
+}
+a:hover img{
+	filter: alpha(opacity=90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+}
+figure{
+	margin: 0;
+}
+fieldset{
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 0 0 24px;
+	padding: 11px 12px 0;
+}
+
+legend{
+	white-space: normal;
+}
+
+button, input, select, textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+button, input{
+	line-height: normal;
+}
+
+input, textarea{
+	background-image: -webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"]{
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled], input[disabled]{
+	cursor: default;
+}
+input[type="checkbox"], input[type="radio"] {
+    margin: 3px 0.5ex;
+	padding: 0;
+}
+input[type="search"]{
+	-webkit-appearance: textfield;
+}
+ input[type="search"]::-webkit-search-decoration{
+ -webkit-appearance: none;
+}
+ button::-moz-focus-inner, input::-moz-focus-inner{
+ border: 0;
+ padding: 0;
+}
+textarea{
+	overflow: auto;
+	vertical-align: top;
+}
+table, th, td{
+	border: none;
+}
+table{
+	font-size: 100%;
+	border-collapse: collapse;
+}
+caption, th, td{
+	font-size: 100%;
+	font-weight: normal;
+}
+
+.indent {
+	display: inline-block;
+	/*
+	padding-left: 1em;
+	text-indent: -1em;
+	*/
+}
+
+.only--pc{ display:block; }
+.only--sp{ display:none; }
+
+/* ラッパー
+----------------------------------- */
+.wrapper{
+	min-width:1000px;
+	overflow:hidden;
+}
+
+/* ヘッダー
+----------------------------------- */
+header{
+	position:relative;
+}
+
+.header__top{
+	max-width:1000px;
+	margin:0 auto;
+	padding:20px 0;
+	overflow:hidden;
+}
+
+/* フッター
+----------------------------------- */
+footer{
+	margin:0 auto;
+}
+
+.footer__link p{
+	padding:0;
+	text-align:center;
+	padding:35px 0;
+}
+
+/* 応募フォーム
+----------------------------------- */
+.sectionForm{
+	background:#ececec;
+}
+.sectionForm--inner{
+	padding:60px 0 50px;
+}
+
+.form {
+	width:760px;
+	background: url("../../examination/images/sec2_bg.png") center top;
+	border-radius:20px 20px 0 0;
+	margin:0 auto;
+	box-shadow: 10px 10px rgba(0,0,0,0.2);
+}
+
+.form__title {
+	color:#fff;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	padding:26px 0 26px;
+	background:#1f9eb9;
+	border-radius:20px 20px 0 0;
+	position:relative;
+}
+
+.form__title:after{
+	content:'';
+	background:url("../../examination/images/form_cach.png") no-repeat left center;
+	width:107px;
+	height:107px;
+	position:absolute;
+	left:56px;
+	top:-20px;
+}
+
+.form div#trust-form.contact-form div.error {
+    font-weight: bold;
+}
+
+.form div#trust-form.contact-form table,
+.form__table {
+	margin: 40px auto 20px;
+	width: 640px;
+}
+
+.form div#trust-form.contact-form table tr:hover {
+    background: none;
+}
+
+.form div#trust-form.contact-form table th,
+.form__table th {
+	background: rgba(231,231,231,0.8);
+	border-bottom: 1px dotted #aaa;
+	font-size: 12px;
+	padding: 5px 0 5px 15px;
+	text-align: left;
+    vertical-align: middle;
+	width: 125px;
+}
+
+.form div#trust-form.contact-form table td,
+.form__table td {
+	border-bottom: 1px dotted #aaa;
+	font-size: 13px;
+	padding: 11px 0 11px 15px;
+}
+
+.form div#trust-form.contact-form table div {
+    padding: 0;
+}
+
+.form div#trust-form.contact-form table tr:nth-last-child(2) th,
+.form div#trust-form.contact-form table tr:nth-last-child(2) td,
+.form__table .last th,
+.form__table .last td {
+	border: none;
+}
+
+.form div#trust-form.contact-form input[type="text"],
+.form div#trust-form.contact-form input[type="email"],
+.form div#trust-form.contact-form input[type="tel"],
+.form__table input.year,
+.form__table input.month,
+.form__table input.date,
+.form__table input.textbox {
+    -webkit-appearance: none;
+	background:none;
+	border:1px solid #bbbbbb;
+    font-size: 10px;
+	padding:8px 10px;
+	width:100%;
+}
+
+.form__table input.year {
+	width: 50px;
+}
+
+.form__table input.month {
+	width: 40px;
+}
+
+.form__table input.date {
+	width: 40px;
+}
+
+.form div#trust-form ul li,
+.form div#trust-form.contact-form label,
+.form__table label {
+	display: inline-block;
+	width: inherit;
+}
+
+#message-container-input,
+.form__term {
+	text-align: center;
+	padding: 12px 0 28px;
+}
+
+#message-container-input a,
+.form__term a {
+	color: #1f9eb9;
+	text-decoration: underline;
+}
+
+.form .submit-container,
+.form__submit {
+	text-align: center;
+	padding: 0 0 51px;
+}
+
+.form .submit-container input[type="submit"] {
+    background: #ff8500;
+    border: 0;
+    border-radius: 40px;
+    box-shadow: 0 7px 0 #f65000;
+    color: #fff;
+    font-size: 30px;
+    margin: 10px auto 0;
+    width: 120px;
+    height: 68px;
+}
+
+.form .submit-container input[type="submit"]:last-child {
+    margin: 10px 0 0 5px;
+}
+
+.header__mv__form {
+	position: absolute;
+	width: 440px;
+	top: 44px;
+	left: 50%;
+	padding: 0 0 0 70px;
+}
+
+.header__mv__form .form {
+	width:440px;
+}
+
+.header__mv__form .form__title{
+	font-size:14px;
+	padding:26px 0 26px 108px;
+}
+
+.header__mv__form .form__title:after{
+	left:15px;
+}
+
+.header__mv__form .form div#trust-form.contact-form table,
+.header__mv__form .form__table {
+	margin: 10px auto 0;
+	width: 400px;
+}
+
+#message-container-confirm,
+#message-container-input,
+.header__mv__form .form__term {
+	/*padding: 12px 0;*/
+	padding: 15px 0 0;
+}
+
+/* メインビジュアル
+----------------------------------- */
+.mv{
+	position:relative;
+}
+
+.mv--inner{
+	background: url("../../examination/images/mv_bg.png") #e2f5f9 no-repeat center top;
+}
+
+.header__mv{
+	width:1000px;
+	margin:0 auto;
+}
+
+.header__mv__catch1{
+	padding:36px 0 0;
+}
+
+.header__mv__catch2{
+	padding:356px 0 30px;
+	margin:0 0 0 -50px;
+}
+
+.header__badge{
+	background: url("../../examination/images/badge_bg.jpg") no-repeat center bottom;
+}
+
+.header__badge ul{
+	width:1000px;
+	margin:0 auto;
+}
+
+.header__badge ul li{
+	display:inline-block;
+	padding:20px 10px 30px 0;
+}
+
+.header__badge ul li:last-child{
+	padding-right:0;
+}
+
+.mv .sectionCV__body {
+    padding: 15px 5px 0;
+}
+
+/* メインコンテンツ
+----------------------------------- */
+/* sectionCV */
+.sectionCV{
+	background:url("../../examination/images/cv_bg.png") center top;
+	padding:50px;
+	margin-top:-35px;
+}
+
+.sectionCV__catch{
+	width:555px;
+	margin:0 auto;
+	text-align:center;
+	font-size:28px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background: url("../../examination/images/cv_left.png") no-repeat left center;
+	padding:0 0 20px;
+}
+.sectionCV__catch--wide{
+	width:722px;
+}
+
+.sectionCV__catch span{
+	display:block;
+	padding:20px 0;
+	background: url("../../examination/images/cv_right.png") no-repeat right center;
+}
+
+.sectionCV__link{
+	text-align:center;
+}
+
+/* section1 */
+.section1{
+	text-align:center;
+}
+.section1 .section1__body--top{
+	background:url("../../examination/images/sec1_bg.png") repeat-x center top;
+}
+
+.section1 .section1__title{
+	padding:50px 0 0;
+}
+
+.section1 .section1__image{
+	padding:20px 0 30px;
+}
+.section1 .section1__body--bottom{
+	text-align:center;
+	padding:50px 0;
+}
+
+/* section2 */
+.section2 .section2__body{
+	background:url("../../examination/images/sec2_bg.png") center top;
+}
+
+.section2 .section2__title{
+	background:url("../../examination/images/sec2_ttl_bg.png") repeat-x center top;
+	text-align:center;
+	padding:47px 0;
+	position:relative;
+}
+
+.section2 .section2__title:after{
+	content:' ';
+	width:140px;
+	height:40px;
+	background:url("../../examination/images/arrow_1.png") no-repeat center bottom;
+	position:absolute;
+	left:50%;
+	bottom:-40px;
+	margin:0 0 0 -75px;
+
+}
+
+.section2__body--inner{
+	margin:0 auto;
+}
+
+.section2__p1,
+.section2__p2,
+.section2__p3{
+	background:url("../../examination/images/sec2_1_bg.png") no-repeat center top;
+	background-size:cover;
+	padding:80px 0 55px;
+}
+.section2__p2{
+	background-image:url("../../examination/images/sec2_2_bg.png");
+}
+.section2__p3{
+	background-image:url("../../examination/images/sec2_3_bg.png");
+	padding-bottom:90px;
+}
+
+.section2__p1--inner,
+.section2__p2--inner,
+.section2__p3--inner{
+	background:rgba(255,255,255,0.8);
+	width:978px;
+	margin:0 auto;
+	position:relative;
+}
+
+.section2__p1__title:after,
+.section2__p2__title:after,
+.section2__p3__title:after{
+	content:'';
+	background:url("../../examination/images/sec2_1.png") no-repeat left center;
+	width:125px;
+	height:125px;
+	position:absolute;
+	left:-25px;
+	top:-25px;
+}
+.section2__p2__title:after{
+	background:url("../../examination/images/sec2_2.png") no-repeat left center;
+}
+.section2__p3__title:after{
+	background:url("../../examination/images/sec2_3.png") no-repeat left center;
+}
+
+.section2__p1__title h3,
+.section2__p2__title h3,
+.section2__p3__title h3{
+	font-size:42px;
+	font-weight:bold;
+	padding:52px 0 52px 160px;
+	position:relative;
+}
+
+.section2__p1__title h3:before,
+.section2__p2__title h3:before,
+.section2__p3__title h3:before{
+	content:" ";
+	position:absolute;
+	left:130px;
+	bottom:45px;
+	width:453px;
+	height:12px;
+	background:#ffde00;
+	border-radius:6px;
+}
+.section2__p2__title h3:before{
+	width:600px;
+}
+.section2__p3__title h3:before{
+	width:811px;
+}
+
+.section2__p1__title h3 span,
+.section2__p2__title h3 span,
+.section2__p3__title h3 span{
+	position:relative;
+	z-index:300;
+}
+
+.section2__p1__description,
+.section2__p2__description,
+.section2__p3__description{
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+	padding:28px 0 50px;
+	line-height:36px;
+}
+
+.section2__p1__image,
+.section2__p2__image,
+.section2__p3__image{
+	text-align:center;
+	padding:0 0 50px;
+}
+
+/* section3 */
+.section3{
+	background:#ececec;
+	text-align:center;
+	padding:80px 0 60px;
+	background:url("../../examination/images/sec3_bg.png") no-repeat center top;
+	background-size:cover;
+}
+.section3 .section3__description{
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+	padding:0 0 30px;
+	line-height:34px;
+}
+
+.section3 .section3__title{
+	padding:0 0 30px;
+}
+
+.section3 .section3__logo{
+	text-align:center;
+}
+
+.section3 .section3__graph{
+	text-align:center;
+	padding:0 0 36px;
+}
+
+/* section4 */
+.section4{
+	text-align:center;
+	padding:80px 0 60px
+}
+.section4__body{
+	width:1000px;
+	margin:0 auto;
+}
+
+.section4 .section4__title{
+	margin:0 auto;
+	text-align:center;
+	padding:0 0 20px;
+}
+
+.section4 .section4__v1,
+.section4 .section4__v2,
+.section4 .section4__v3{
+	width:800px;
+	background:url("../../examination/images/sec4_5.png") no-repeat left bottom;
+	overflow:hidden;
+	margin:0 0 50px;
+}
+.section4 .section4__v2{
+	background:url("../../examination/images/sec4_6.png") no-repeat right bottom;
+}
+.section4 .section4__v3{
+	background:url("../../examination/images/sec4_7.png") no-repeat left bottom;
+}
+
+.section4 .section4__v1 .section4__comment,
+.section4 .section4__v2 .section4__comment,
+.section4 .section4__v3 .section4__comment{
+	width:470px;
+	background:url("../../examination/images/sec4_4.png") left center;
+	line-height:26px;
+	padding:25px 40px;
+	margin:0 0 0 250px;
+	border-radius:10px;
+	position:relative;
+}
+
+.section4 .section4__v1 .section4__comment:before,
+.section4 .section4__v2 .section4__comment:before,
+.section4 .section4__v3 .section4__comment:before{
+	content:" ";
+	background:url("../../examination/images/sec4_3.png") no-repeat right center;
+	width:45px;
+	height:26px;
+	position:absolute;
+	left:-45px;
+	bottom:32px;
+}
+
+.section4 .section4__v1 .section4__comment__title,
+.section4 .section4__v2 .section4__comment__title,
+.section4 .section4__v3 .section4__comment__title{
+	display:block;
+	color:#1f9eb9;
+	font-weight:bold;
+}
+
+.section4 .section4__v2{
+	margin:0 0 50px 200px;
+}
+.section4 .section4__v2 .section4__comment{
+	margin:20px 0 10px;
+}
+.section4 .section4__v2 .section4__comment:before{
+	background:url("../../examination/images/sec4_3_2.png") no-repeat right center;
+	left:auto;
+	right:-45px;
+}
+.section4 .section4__v3 .section4__comment:before{
+	bottom:62px;
+}
+
+/* section5 */
+.section5{
+	text-align:center;
+	padding:80px 0 100px;
+	background:#e7fbff;
+
+}
+.section5__body{
+	width:1000px;
+	margin:0 auto;
+}
+
+.section5 .section5__title{
+	text-align:center;
+	padding:0 0 58px;
+}
+
+.section5 .section5__humans--outer{
+	position:relative;
+	width:900px;
+	margin:0 auto;
+}
+
+.section5 .section5__humans__shadow{
+	background:url("../../examination/images/sec5_5.png") no-repeat center center;
+	width:900px;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.section5 .section5__human{
+	margin:0 auto;
+	background:url("../../examination/images/sec5_4.png") #efefef no-repeat right bottom;
+	padding:25px;
+	width:317px;
+	margin:0 10px;
+}
+
+.section5 .section5__human__image{
+	padding:0 0 18px;
+}
+
+.section5 .section5__human__comment{
+	height:60px;
+}
+
+.section5__prev,
+.section5__next{
+	position:absolute;
+	top:50%;
+	z-index:9999;
+	margin-top: -22px;
+	width:21px;
+	height:45px;
+	border:none;
+}
+.section5__prev{
+	left:-50px;
+	background:url("../../examination/images/sec5_3.png") center top;
+}
+.section5__next{
+	right:-50px;
+	background:url("../../examination/images/sec5_2.png") center top;
+}
+
+/* section6 */
+.section6{
+	background:url("../../examination/images/sec2_bg.png") center top;
+	text-align:center;
+	padding:0 0 60px
+}
+.section6__body--inner{
+	width:1000px;
+	margin:0 auto;
+}
+
+.section6 .section6__title{
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+	padding:40px 0;
+	margin:0 0 90px;
+	background:#1f9eb9;
+	color:#FFFFFF;
+	position:relative;
+}
+.section6 .section6__title:after{
+	content:' ';
+	width:64px;
+	height:24px;
+	background:url("../../examination/images/arrow_2.png") no-repeat center bottom;
+	position:absolute;
+	left:50%;
+	bottom:-22px;
+	margin:0 0 0 -32px;
+}
+
+.section6__human{
+	overflow:hidden;
+	width:800px;
+	margin:0 auto 50px;
+}
+
+.section6__human--l{
+	float:left;
+	width:190px;
+}
+
+.section6__human--r{
+	float:right;
+	width:487px;
+	border:2px solid #1f9eb9;
+	border-radius:4px;
+	text-align:left;
+	background:#FFFFFF;
+	padding:25px 38px;
+	position:relative;
+}
+
+.section6__human--r:after{
+	content:' ';
+	width:38px;
+	height:31px;
+	background:url("../../examination/images/sec6_arrow.png") no-repeat center bottom;
+	position:absolute;
+	left:-38px;
+	top:36%;
+}
+
+.section6__human--right .section6__human--l{
+	float:right;
+}
+.section6__human--right .section6__human--r{
+	float:left;
+}
+.section6__human--right .section6__human--r:after{
+	left:auto;
+	right:-38px;
+	background:url("../../examination/images/sec6_arrow_r.png") no-repeat center bottom;
+}
+
+.section6__human__name{
+	padding:35px 0 0;
+}
+
+.section6__human--r dt{
+	color:#1f9eb9;
+	padding:0 0 30px;
+	font-weight:bold;
+}
+
+.section6__human--r dd{
+	padding:0;
+}
+
+/* section7 */
+.section7{
+	text-align:center;
+	padding:0 0 0px
+}
+.section7__body--inner{
+	width:1000px;
+	margin:82px auto;
+}
+
+.section7 .section7__title{
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+	margin:0 0 50px;
+}
+
+.section7__flow{
+	text-align:center;
+	margin:0 0 80px;
+}
+
+.section7 .section7__title__qa{
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+	margin:0 auto 50px;
+	padding:26px 0 20px;
+	background:url("../../examination/images/sec7_2.png") no-repeat left center;
+	width:380px
+}
+
+.section7 .section7__title__qa{
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+	margin:0 auto 50px;
+	padding:26px 0 20px;
+	background:url("../../examination/images/sec7_2.png") no-repeat left center;
+	width:380px
+}
+
+.accordion{
+	width:700px;
+	margin:0 auto;
+	padding:0 0 20px;
+	text-align:left;
+}
+
+.accordion dt{
+	position:relative;
+	cursor:pointer;
+	background:url("../../examination/images/sec7_3.png") #ececec no-repeat 30px center;
+	font-size:18px;
+	font-weight:bold;
+}
+.accordion dt a{
+	display:block;
+	padding:30px 0 30px 68px;
+	background:url("../../examination/images/icon_down.png") no-repeat 650px center;
+}
+.accordion dt.is-open a{
+	background-image:url("../../examination/images/icon_up.png");
+}
+
+.accordion dd{
+	background:url("../../examination/images/sec7_4.png") no-repeat 30px 34px;
+	padding:38px 0 30px 68px;
+	position:relative;
+	display:none;
+	line-height:1.5;
+	font-size:16px;
+}
+
+
+/*=========================スマホ用スタイルここから=========================*/
+@media screen and ( max-width: 767px ){
+	.only--pc{ display:none; }
+	.only--sp{ display:block; }
+	img{ width:100%; }
+
+	/* ラッパー
+	----------------------------------- */
+	.wrapper{
+		min-width:initial;
+		overflow:auto;
+	}
+
+	/* ヘッダー
+	----------------------------------- */
+	.header__top{
+		padding:10px 20px;
+	}
+	.header__top__logo{
+		width:266px;
+	}
+
+	/* フッター
+	----------------------------------- */
+	footer{
+		width:auto;
+	}
+
+	/* メインビジュアル
+	----------------------------------- */
+	.mv--inner{
+		background: url("../../examination/images/sp/mv_bg.png") #e2f5f9 no-repeat center top;
+		background-size:cover;
+	}
+
+	.header__mv{
+		overflow:hidden;
+		width:auto;
+		margin:0 auto;
+	}
+
+	.header__mv__catch1{
+		padding:12px 0 0 20px;
+		width:45%;
+	}
+
+	.header__mv__catch2{
+		padding:170px 0 25px;
+		width:80%;
+		margin:0 auto;
+	}
+
+	.sectionForm--inner{
+		padding:50px 20px;
+	}
+
+	.header__mv__form{
+		width:auto;
+		padding:0 20px;
+		margin:30px auto 0 ;
+		position:static;
+	}
+
+	.form,
+	.header__mv__form .form{
+		width: auto;
+	}
+
+	.form__title,
+	.header__mv__form .form__title {
+		text-align: left;
+		font-size:10px;
+		padding:13px 0 13px 24%;
+	}
+
+	.form__title:after,
+	.header__mv__form .form__title:after {
+		background-size:cover;
+		height: 63px;
+		width: 63px;
+		left: 2%;
+		top: -11px;
+	}
+
+	.form div#trust-form.contact-form table,
+    .header__mv__form .form div#trust-form.contact-form table,
+	.form__table,
+	.header__mv__form .form__table{
+		width: 96%;
+		margin:20px auto 0;
+	}
+
+	.form div#trust-form.contact-form table th,
+	.form__table th,
+	.header__mv__form .form__table th {
+		font-size: 12px;
+		padding: 15px 0 15px 5px;
+		width: 95px;
+	}
+
+	.form .submit-container,
+	.form .submit-container input,
+	.form__submit,
+	.form__submit input,
+	.header__mv__form .form__submit,
+	.header__mv__form .form__submit input{
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.form__term,
+	.header__mv__form .form__term{
+		font-size:12px;
+		padding:12px 20px;
+	}
+
+	.header__badge{
+		background: url("../../examination/images/sp/badge_bg.png") no-repeat center 20px;
+		background-size:cover;
+	}
+
+	.header__badge ul{
+		width:auto;
+		margin:0 auto;
+	}
+
+	.header__badge ul li{
+		padding:0 0 10px 0;
+		width:20%;
+	}
+
+	/* sectionCV */
+	.sectionCV{
+		padding:25px 17px;
+		position:relative;
+		margin-top:-55px;
+	}
+
+	.sectionCV__catch{
+		width:290px;
+		font-size:14px;
+		background-size:25px auto;
+		padding:0;
+	}
+	.sectionCV__catch--wide{
+		width:250px;
+	}
+
+	.sectionCV__catch span{
+		display:block;
+		padding:10px 0;
+		margin:20px 0 0;
+		background-size:25px auto;
+	}
+
+	/* section1 */
+	.section1 .section1__title{
+		padding:20px 0 0;
+		width:88%;
+		margin:0 auto;
+	}
+
+	.section1 .section1__body--bottom{
+		padding:30px 0;
+		margin:0 auto;
+		width:87%;
+	}
+
+	/* section2 */
+	.section2 .section2__title{
+		padding:25px 0;
+	}
+	.section2 .section2__title:after{
+		width:100px;
+		height:30px;
+		background:url("../../examination/images/arrow_1.png") no-repeat center bottom;
+		left:50%;
+		bottom:-29px;
+		margin:0 0 0 -50px;
+		z-index:9999;
+	}
+
+	.section2 .section2__title img{
+		margin:0 auto;
+		width:87%;
+	}
+
+	.section2__body--inner{
+		width:auto;
+		padding:0;
+	}
+	.section2__p1,
+	.section2__p2,
+	.section2__p3{
+		padding:0;
+	}
+	.section2__p3{
+		padding-bottom:20px;
+	}
+
+	.section2__p1--inner,
+	.section2__p2--inner,
+	.section2__p3--inner{
+		background:rgba(255,255,255,0.8);
+		padding:30px 20px;
+		width:auto;
+		margin:0 auto;
+		position:relative;
+	}
+	.section2__p3--inner{
+		padding-bottom:50px;
+	}
+
+	.section2__p1__title:after,
+	.section2__p2__title:after,
+	.section2__p3__title:after{
+		content:'';
+		left:20px;
+		top:20px;
+		width:46px;
+		height:46px;
+		background-size:cover;
+	}
+	.section2__p3__title:after{
+		top:30px;
+	}
+
+	.section2__p1__title,
+	.section2__p2__title,
+	.section2__p3__title{
+		background-size:auto 60px;
+	}
+
+	.section2__p1__title h3,
+	.section2__p2__title h3,
+	.section2__p3__title h3{
+		font-size:21px;
+		padding:0px 0 10px 65px;
+	}
+	.section2__p2__title h3,
+	.section2__p3__title h3{
+		padding:0px 0 10px 88px;
+		line-height:1.2em;
+		text-indent:-1em;
+	}
+
+	.section2__p1__title h3:before,
+	.section2__p2__title h3:before,
+	.section2__p3__title h3:before{
+		left:60px;
+		bottom:4px;
+		width:203px;
+	}
+	.section2__p2__title h3:before{
+		left:83px;
+		bottom:10px;
+		width:116px;
+	}
+	.section2__p3__title h3:before{
+		left:83px;
+		bottom:10px;
+	}
+
+	.section2__p2__title h3:after,
+	.section2__p3__title h3:after{
+		content:" ";
+		position:absolute;
+		left:60px;
+		bottom:35px;
+		width:203px;
+		height:12px;
+		background:#ffde00;
+		border-radius:6px;
+	}
+	.section2__p2__title h3:after{
+		width:180px;
+	}
+
+	.section2__p1__description,
+	.section2__p2__description,
+	.section2__p3__description{
+		text-align:left;
+		font-size:14px;
+		padding:28px 0;
+		line-height:23px;
+	}
+
+	.section2__p1__image,
+	.section2__p2__image,
+	.section2__p3__image{
+		padding:0 0 20px;
+	}
+
+	/* section3 */
+	.section3{
+		padding:40px 0 30px
+	}
+	.section3 .section3__description{
+		font-size:14px;
+		padding:0 0 30px;
+		line-height:23px;
+	}
+
+	.section3 .section3__title{
+		padding:0 5px 25px;
+	}
+
+	/* section4 */
+	.section4 {
+		padding:0 0 30px
+	}
+	.section4__body {
+		width:auto;
+		padding:0 20px;
+	}
+
+	.section4 .section4__title {
+		font-size:13px;
+	}
+
+	.section4 .section4__title h2 {
+		background-size: 34px auto;
+		padding: 30px 0;
+	}
+
+	.section4 .section4__v1,
+	.section4 .section4__v2,
+	.section4 .section4__v3{
+		width:auto;
+		border-bottom:none;
+		background-size:100px auto;
+		background-position:left top;
+	}
+
+	.section4 .section4__v1 .section4__comment,
+	.section4 .section4__v2 .section4__comment,
+	.section4 .section4__v3 .section4__comment{
+		width:auto;
+		margin:0 0 0 40%;
+		font-size:12px;
+		padding:14px 5%;
+		line-height:18px;
+		width:50%;
+	}
+
+	.section4 .section4__v1 .section4__comment:before,
+	.section4 .section4__v2 .section4__comment:before,
+	.section4 .section4__v3 .section4__comment:before{
+		content:" ";
+		background:url("../../examination/images/sec4_3.png") no-repeat left top;
+		width:20px;
+		height:26px;
+		left:-20px;
+		top:32px;
+	}
+
+	.section4 .section4__v2{
+		margin:0 0 50px;
+		background-size:100px auto;
+		background-position:right top;
+	}
+
+	.section4 .section4__v2 .section4__comment{
+		margin:0;
+		width:50%;
+	}
+
+	.section4 .section4__v2 .section4__comment:before{
+		background:url("../../examination/images/sec4_3_2.png") no-repeat right center;
+		left:auto;
+		right:-20px;
+	}
+
+	/* section5 */
+	.section5{
+		padding:0 0 60px
+	}
+	.section5__body{
+		width:auto;
+	}
+
+	.section5 .section5__title{
+		padding:46px 20px 27px;
+	}
+
+	.section5 .section5__humans--outer{
+		position:relative;
+		width:auto;
+		padding:0 32px;
+	}
+
+	.section5 .section5__humans__shadow{
+		display:none;
+	}
+
+	.section5 .section5__human{
+		width:155px;
+		padding:15px;
+	}
+
+	.section5 .section5__human__image{
+		width:160px;
+	}
+	.section5 .section5__human__comment{
+		height:110px;
+	}
+
+	.section5 .section5__human__name{
+		text-align:right;
+		padding:0 0 14px;
+	}
+
+	.section5__prev{
+		width:10px;
+		height:21px;
+		left:-20px;
+		background:url("../../examination/images/sec5_3.png") no-repeat center top;
+		background-size:10px 21px;
+	}
+	.section5__next{
+		width:10px;
+		height:21px;
+		right:-20px;
+		background:url("../../examination/images/sec5_2.png") no-repeat center top;
+		background-size:10px 21px;
+	}
+
+	/* section6 */
+	.section6{
+		padding:0 0 30px
+	}
+	.section6__body--inner{
+		width:auto;
+		padding:0 20px;
+	}
+
+	.section6 .section6__title{
+		margin:0 0 45px;
+		font-size:18px;
+		padding:23px 0;
+	}
+
+	.section6__human{
+		width:auto;
+		overflow:hidden;
+		margin:0 auto 50px;
+	}
+	.section6__human__name{
+		padding:10px 0 0;
+	}
+
+	.section6__human--l{
+		float:none;
+		width:auto;
+	}
+	.section6__human--right .section6__human--l{
+		float:none;
+	}
+
+	.section6__human--l .section6__human__image{
+		float:left;
+		width:20%;
+		padding: 0 20px 20px 0;
+	}
+
+	.section6__human--r{
+		float:none;
+		width:auto;
+		clear:both;
+		padding:15px;
+	}
+	.section6__human--r:after{
+		width:0;
+		height:0;
+	}
+
+	.section6__human--r dt{
+		padding:0 0 20px;
+	}
+
+	.section6__human--r dd{
+		padding:0;
+	}
+
+	/* section7 */
+	.section7{
+		padding:0 0 30px
+	}
+	.section7__body--inner{
+		width:auto;
+		margin:37px auto;
+		padding:0 20px;
+	}
+
+	.section7 .section7__title{
+		font-size:18px;
+		margin:0 0 25px;
+	}
+
+	.section7__flow{
+		margin:0 auto 40px;
+		width:280px;
+	}
+
+	.section7 .section7__title__qa{
+		width:245px;
+		font-size:18px;
+		margin:0 auto 25px;
+		padding:20px 0;
+		background-size:30px auto;
+	}
+
+	.accordion{
+		width:auto;
+	}
+
+	.accordion dt{
+		font-size:13px;
+		background-size:13px auto;
+		background-position:15px 15px;
+	}
+	.accordion dt a{
+		padding:13px 30px 13px 34px;
+		background-position:96% center;
+		background-size:13px auto;
+	}
+
+	.accordion dd{
+		font-size:13px;
+		padding:13px 0 13px 34px;
+		background-size:15px auto;
+		background-position:15px 15px;
+	}
+
+}
+
+/* Trust Form CSS 上書き
+----------------------------------- */
+@media only screen and ( max-width: 600px ) {
+    .form div#trust-form table {
+		margin: inherit;
+		border: none;
+	}
+
+    .form div#trust-form table th,
+	.form div#trust-form table td {
+		float: none;
+		clear: none;
+		width: inherit;
+	}
+
+	.form div#trust-form table ul li {
+		line-height: inherit;
+	}
+}
+
+.tit__common {
+	text-align: center;
+	font-size: 38px;
+	font-weight: bold;
+	color: #555;
+	padding: 60px 0;
+	line-height: 1.2;
+}
+
+
+#main_contents {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0 0 60px;
+}
+
+.block {
+	margin-bottom: 40px;
+}
+
+.block p {
+	margin-bottom: 10px;
+}
+
+#main_contents .h3_back {
+    color: #1E2C5C;
+    border-left: 1px solid #1E2C5C;
+    font-size: 22px;
+    padding: 4px 0 4px 10px;
+    margin-bottom: 10px;
+}
+
+#main_contents .h4_back {
+    font-weight: bold;
+    color: #1E2C5C;
+    border-left: 2px solid #1E2C5C;
+    margin-bottom: 5px;
+    padding: 2px 0 2px 5px;
+    font-size: 17px;
+}
+
+.kiyaku {
+    margin: 1em 0;
+    padding-left: 40px;
+    list-style-type: decimal;
+}
+
+.kiyaku li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.kinshi {
+    padding-left: 40px;
+}
+
+.kinshi li {
+    margin: 1em 0;
+    list-style-type: decimal;
+    font-weight: normal;
+}
+
+.joho {
+    padding-left: 20px;
+}
+
+.joho li {
+    margin: 1em 0;
+    list-style-type: decimal;
+    font-weight: normal;
+}
+
+.kaiin {
+    margin: 1em 0;
+    list-style-type: decimal;
+    font-weight: normal;
+    padding-left: 40px;
+}
